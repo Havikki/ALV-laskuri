@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="fi">
 
 <head>
     <meta charset="UTF-8">
-    <title>ALV Laskuri</title>
+    <title>ALV-laskuri</title>
 </head>
 
 <body>
-    <h3>Laske arvonlisäveron määrä verollisesta hinnasta</h3>
+    <h3>Laske ALV:n määrä hinnasta</h3>
 
     <form>
         <label>Hinta:</label>
@@ -16,6 +16,7 @@
     </form>
 
     <p id="vastaus"></p>
+    <p id="alviton"></p>
 
     <script>
         function laskeAlv() {
@@ -27,6 +28,7 @@
             // 3. vaihe laskutoimituksen tuloksen tulostus
             document.getElementById("vastaus").innerHTML = "ALV on " +
                 alvmaara.toFixed(2) + " euroa";
+                document.getElementById("alviton").innerHTML = "Arvonlisäveroton hinta on " + alviton.toFixed(2) + "euroa";
         }
     </script>
 </body>
