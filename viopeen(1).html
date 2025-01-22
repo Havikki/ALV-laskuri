@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Viope esimerkki</title>
+</head>
+
+<body>
+    <h3>Viopeen esimerkki</h3>
+
+    <form>
+        <label>Hinta:</label>
+        <input type="text" id="hinta" size="5">
+        <input type="button" id="painike" value="Laske ALV määrä" onclick="laskeAlv()">
+    </form>
+
+    <p id="vastaus"></p>
+
+    <script>
+        function laskeAlv() {
+            // 1. vaihe syöttökentästä hinta muuttujaan
+            let hintaalv = Number(document.getElementById("hinta").value);
+            // 2. vaihe alv laskenta
+            let alviton = hintaalv / 1.255;
+            let alvmaara = hintaalv - alviton 
+            // 3. vaihe laskutoimituksen tuloksen tulostus
+            document.getElementById("vastaus").innerHTML = "ALV on " +
+                alvmaara.toFixed(2) + " euroa";
+        }
+    </script>
+</body>
+
+</html>
